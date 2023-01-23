@@ -95,6 +95,14 @@
             messages.appendChild(item);
             window.scrollTo(0, document.body.scrollHeight);
         });
+
+        socket.on('user connected', function(userName) {
+            console.log(`${userName} connected`);
+        });
+
+        socket.on('user disconnected', function(userName) {
+            console.log(`${userName} disconnected`);
+        });
     </script>
 </body>
 

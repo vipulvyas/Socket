@@ -11,10 +11,11 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
-
+  io.emit('user connected', 'connected');
   // disconnect
   socket.on('disconnect', () => {
     console.log('user disconnected');
+    io.emit('user disconnected', 'disconnected');
   });
 
   // on message
@@ -25,5 +26,5 @@ io.on('connection', (socket) => {
 });
 
 server.listen(3000, () => {
-  console.log('listening on *:3000');
+  console.log('listening on port:3000');
 });
