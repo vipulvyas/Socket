@@ -1,2 +1,3 @@
 ./Ws-scalability-haproxy-redis/app/node_module
 ./chat-app/node_module
+./multiplayer-cell-game/node_module
